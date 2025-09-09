@@ -17,9 +17,9 @@ jobs:
     - name: Deploy to Staging Server
       uses: appleboy/ssh-action@master
       with:
-        host: ${{ secrets.SSH_HOST }}
-        username: ${{ secrets.SSH_USERNAME }}
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        host: ${{ secrets.IP_DEL_SERVIDOR }}
+        username: ${{ secrets.USUARIO_SERVIDOR }}
+        key: ${{ secrets.SSH_KEY }}
         script: |
           cd ~/lemp-sites/facundo_oyola/staging
           git pull origin develop
